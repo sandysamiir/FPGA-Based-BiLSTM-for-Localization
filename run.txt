@@ -1,0 +1,39 @@
+# Load the necessary libraries and design units
+vlib work
+vmap work work
+
+# Compile the source files
+vlog -f sourcefile.txt
+# Load the testbench module
+vsim -gui work.Inertial_network_TOP_TB
+
+# Add necessary waveforms 
+add wave -position insertpoint  \
+sim:/Inertial_network_TOP_TB/dut/clk \
+sim:/Inertial_network_TOP_TB/dut/rst \
+sim:/Inertial_network_TOP_TB/dut/start_inertial \
+sim:/Inertial_network_TOP_TB/dut/input_write_address \
+sim:/Inertial_network_TOP_TB/dut/input_write_data \
+sim:/Inertial_network_TOP_TB/dut/input_write_enable \
+sim:/Inertial_network_TOP_TB/dut/X_position \
+sim:/Inertial_network_TOP_TB/dut/y_position \
+sim:/Inertial_network_TOP_TB/dut/z_position \
+sim:/Inertial_network_TOP_TB/dut/done_inertial \
+sim:/Inertial_network_TOP_TB/dut/start_bilstm \
+sim:/Inertial_network_TOP_TB/dut/bilstm_out \
+sim:/Inertial_network_TOP_TB/dut/bilstm_out_vector \
+sim:/Inertial_network_TOP_TB/dut/done_store_concat \
+sim:/Inertial_network_TOP_TB/dut/bilstm_done \
+sim:/Inertial_network_TOP_TB/dut/fc1_out_vector \
+sim:/Inertial_network_TOP_TB/dut/out_done_fc1 \
+sim:/Inertial_network_TOP_TB/dut/relu_out_vector \
+sim:/Inertial_network_TOP_TB/dut/out_done_fc2 \
+sim:/Inertial_network_TOP_TB/dut/out_vector_fc2 \
+sim:/Inertial_network_TOP_TB/dut/start_fc1 \
+sim:/Inertial_network_TOP_TB/dut/start_fc2 \
+sim:/Inertial_network_TOP_TB/j \
+sim:/Inertial_network_TOP_TB/k 
+
+# Run the simulation
+run -all
+
