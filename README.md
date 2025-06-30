@@ -75,6 +75,7 @@ Separate folders for weights/biases tailored to dataset difficulty:
   - Input-to-hidden and hidden-to-hidden weights  
   - Gate biases  
   - FC layer weights and biases
+
 ⚠️ Usage Note:
 When you want to simulate a specific difficulty level, copy the desired .mem files into the top-level directory. The simulation loads weights from this main location, so you need to move the appropriate set there before running.
 
@@ -124,7 +125,9 @@ When you want to simulate a specific difficulty level, copy the desired .mem fil
 
 ## 📦 Dataset
 This project is originally based on The EuRoC MAV Dataset:
+
 👉 [EuRoC MAV Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)
+
 In this implementation, you don't need to download the dataset just to run simulations or test the RTL. All necessary input sequences, labels, and the high-level model outputs (from Python) are already exported and included in the repository.
 
 ✅ You only need to download the EuRoC dataset if you intend to retrain the model or generate new weight files.
