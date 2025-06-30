@@ -14,7 +14,7 @@ This repository contains the complete RTL design, testbenches, weight/bias files
 
 ---
 
-## Network Architecture
+## 📊 Network Architecture
 The following diagram illustrates the architecture of the BiLSTM model used for position estimation:
 
 ![Block_Diagram](https://github.com/user-attachments/assets/6de97adc-6e68-434c-93c4-3af0c82c621c)
@@ -122,7 +122,7 @@ When you want to simulate a specific difficulty level, copy the desired .mem fil
 
 ---
 
-📦 Dataset
+## 📦 Dataset
 This project is originally based on The EuRoC MAV Dataset:
 👉 [EuRoC MAV Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)
 In this implementation, you don't need to download the dataset just to run simulations or test the RTL. All necessary input sequences, labels, and the high-level model outputs (from Python) are already exported and included in the repository.
